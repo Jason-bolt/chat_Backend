@@ -25,11 +25,11 @@
                 <div class="card shadow mt-5 py-2">
                     <div class="card-body">
                         <h1 class="py-2">Welcome to Chat App</h1>
-                        <a href="register.html" class="btn btn-primary my-2 px-5 rounded-pill">
+                        <a href="{{ route('register') }}" class="btn btn-primary my-2 px-5 rounded-pill">
                             REGISTER
                         </a>
                         <br />
-                        <a href="login.html" class="btn btn-primary my-2 px-5 rounded-pill">
+                        <a href="{{ route('login') }}" class="btn btn-primary my-2 px-5 rounded-pill">
                             LOGIN
                         </a>
                     </div>
