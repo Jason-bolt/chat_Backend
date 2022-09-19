@@ -39,7 +39,7 @@
             <div class="col-4" style="background-color: #eee;">
                 <!-- user info -->
                 <div class="text-center pt-4">
-                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="120px">
+                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="120px">
                     <p class="lead">Jason Appiatu</p>
                 </div>
 
@@ -49,7 +49,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -65,7 +65,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -81,7 +81,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -97,7 +97,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -113,7 +113,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -129,7 +129,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -145,7 +145,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -161,7 +161,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -177,7 +177,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="me.jpg" alt="Image" class="img-fluid rounded-circle" width="50px">
+                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -198,7 +198,7 @@
                 <div class="text-end" style="height: 60px; width: 100%; background-image: linear-gradient(to right, #1900ff, rgb(59, 0, 99));">
 
                     <p class="h5"><span class="text-white">Jason Appiatu</span>
-                        <img src="me.jpg" alt="Image" class="img-fluid rounded-circle m-2" width="45px">
+                        <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle m-2" width="45px">
                     </p>
                 </div>
 
