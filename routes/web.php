@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'index']);
 
 
+Route::middleware('auth')->group(function () {
+    Route::get('/chat', [Controller::class, 'chat'])->name('chat');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

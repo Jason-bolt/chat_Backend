@@ -17,17 +17,29 @@
             <div class="mx-auto col-sm-9 col-md-6">
                 <div class="card shadow mt-5 py-2" style="border-radius: 30px;">
                     <div class="card-body">
+                        @if ($errors->any())
+                            <div>
+
+                                @foreach ($errors->all() as $error)
+                                    <div class="alert alert-warning alert-dismissible fade show py-1" role="alert">
+                                        {{ $error }}
+                                        <small><button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button></small>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
                         <h1 class="py-2">Login</h1>
-                        <form action="#" style="width: 80%;" class="mx-auto my-4">
-                            <input type="text" class="form-control my-3 rounded-pill" placeholder="Username...">
-                            <input type="password" class="form-control my-3 rounded-pill" placeholder="Password...">
+                        <form action="{{ route('login') }}" method="POST" style="width: 80%;" class="mx-auto my-4">
+                            @csrf
+                            <input type="text" class="form-control my-3 rounded-pill" name="email" placeholder="Email...">
+                            <input type="password" class="form-control my-3 rounded-pill" name="password" placeholder="Password...">
 
                             <button class="btn btn-primary px-5 rounded-pill">
                                 Login
                             </button>
                             <p class="mt-2">
                                 <small>
-                                    <a href="register.html">Register instead</a>
+                                    <a href="{{ route('register') }}">Register instead</a>
                                 </small>
                             </p>
                         </form>

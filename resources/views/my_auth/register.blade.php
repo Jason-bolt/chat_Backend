@@ -17,19 +17,32 @@
             <div class="mx-auto col-sm-9 col-md-6">
                 <div class="card shadow mt-5 py-2" style="border-radius: 30px;">
                     <div class="card-body">
+
+                        @if ($errors->any())
+                            <div>
+
+                                @foreach ($errors->all() as $error)
+                                    <div class="alert alert-warning alert-dismissible fade show py-1" role="alert">
+                                        {{ $error }}
+                                        <small><button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button></small>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
                         <h1 class="py-2">Register</h1>
-                        <form action="#" style="width: 80%;" class="mx-auto my-4">
+                        <form action="{{ route('register') }}" method="POST" style="width: 80%;" class="mx-auto my-4">
+                            @csrf
                             <input type="email" name="email" id="email" class="form-control my-3 rounded-pill" placeholder="Email...">
                             <input type="text" name="username" id="username" class="form-control my-3 rounded-pill" placeholder="Username...">
                             <input type="password" name="password" class="form-control my-3 rounded-pill" placeholder="Password...">
-                            <input type="password" name="password-confirm" class="form-control my-3 rounded-pill" placeholder="Confirm password...">
+                            <input type="password" name="password_confirmation" class="form-control my-3 rounded-pill" placeholder="Confirm password...">
 
-                            <button class="btn btn-primary px-5 rounded-pill">
+                            <button type="submit" class="btn btn-primary px-5 rounded-pill">
                                 Register
                             </button>
                             <p class="mt-2">
                                 <small>
-                                    <a href="login.html">Login instead</a>
+                                    <a href="{{ route('login') }}">Login instead</a>
                                 </small>
                             </p>
                         </form>
