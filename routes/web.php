@@ -20,6 +20,7 @@ Route::get('/', [Controller::class, 'index']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/chat', [Controller::class, 'chat'])->name('chat');
+    Route::post('/chat', [Controller::class, 'send_message'])->name('send-message');
 });
 
 
