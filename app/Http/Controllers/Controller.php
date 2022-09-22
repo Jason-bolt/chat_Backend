@@ -26,15 +26,16 @@ class Controller extends BaseController
 
     function send_message(Request $request)
     {
-        $request->validate([
-           'username' => ['string'],
-           'message' => ['message']
-        ]);
-
-        $username = $request->username;
-        $message = $request->message;
-
-        event(new Message($username, $message));
+        dd($request);
+//        $request->validate([
+//           'username' => ['string'],
+//           'message' => ['message']
+//        ]);
+//
+//        $username = $request->username;
+//        $message = $request->message;
+//
+//        event(new Message($username, $message));
     }
 
 }

@@ -49,7 +49,7 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
+{{--                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">--}}
                                 </div>
 
                                 <div class="ms-2 mt-1">
@@ -226,7 +226,8 @@
 
                 <!-- Form -->
                 <div class="position-absolute bottom-0 bg-white px-2" style="height: 45px; width: 100%;">
-                    <form action="" class="pt-1">
+                    <form action="{{ route('send-message') }}" method="POST" class="pt-1">
+                        @csrf
                         <div class="d-flex flex-row justify-content-around">
                             <!-- Attachment button -->
                             <div class="btn btn-secondary rounded-circle" style="overflow: hidden; position:relative; background-image: radial-gradient(rgb(12, 0, 116), rgb(45, 0, 56)); border: 0;">
@@ -243,7 +244,8 @@
                                 </ul>
                             </div> -->
 
-                            <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 70%; resize: none; height: fit-content;" placeholder="Type your message here..."></textarea>
+                            <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 70%; resize: none; height: fit-content;" placeholder="Type your message here..." required></textarea>
+                            <input type="text" name="username" value="{{ auth()->user()->username }}" hidden>
                             <button class="btn btn-primary rounded-pill px-2 px-sm-3 px-md-5"><span id="send-button">Send</span> <i class="bi bi-send"></i></button>
                         </div>
                     </form>
@@ -254,6 +256,8 @@
         </div>
     </div>
 </section>
+
+<script src="{{ asset('app.js') }}"></script>
 
 </body>
 </html>
