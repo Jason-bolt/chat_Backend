@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    @vite('resources/js/app.js')
+
 
     <style>
         body{
@@ -49,22 +51,6 @@
                         <div class="border">
                             <div class="d-inline-flex p-1">
                                 <div>
-{{--                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">--}}
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
                                     <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                 </div>
 
@@ -77,118 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
 
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -205,11 +80,8 @@
 
                 <!-- Messages -->
                 <div style="height: 84vh; overflow: auto;" class="">
-                    <div class="container pt-3" style="font-size: 13px;">
-                        <!-- My message -->
-                        <div class="d-flex justify-content-end">
-                            <p class="rounded bg-white px-2 mb-2 d-inline-block py-1 me-0" style="max-width: 70%;">This is a message</p>
-                        </div>
+                    <div class="container pt-3" id="messages" style="font-size: 13px;">
+
 
                         <!-- Other person's message -->
                         <div class="d-flex justify-content-start">
@@ -226,7 +98,7 @@
 
                 <!-- Form -->
                 <div class="position-absolute bottom-0 bg-white px-2" style="height: 45px; width: 100%;">
-                    <form action="{{ route('send-message') }}" method="POST" class="pt-1">
+                    <form action="{{ route('send-message') }}" method="POST" class="pt-1" id="chat_form">
                         @csrf
                         <div class="d-flex flex-row justify-content-around">
                             <!-- Attachment button -->
@@ -245,19 +117,55 @@
                             </div> -->
 
                             <textarea name="message" id="message" rows="1" class="form-control rounded-pill me-2" style="width: 70%; resize: none; height: fit-content;" placeholder="Type your message here..." required></textarea>
-                            <input type="text" name="username" value="{{ auth()->user()->username }}" hidden>
-                            <button class="btn btn-primary rounded-pill px-2 px-sm-3 px-md-5"><span id="send-button">Send</span> <i class="bi bi-send"></i></button>
+                            <input type="text" name="username" id="username" value="{{ auth()->user()->username }}" hidden>
+                            <button type="submit" class="btn btn-primary rounded-pill px-2 px-sm-3 px-md-5"><span id="send-button">Send</span> <i class="bi bi-send"></i></button>
                         </div>
                     </form>
 
-                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<script src="{{ asset('app.js') }}"></script>
+
+<script>
+    $(document).ready(function () {
+        {{--showAllPosts();--}}
+        {{--function showAllPosts() {--}}
+        {{--    $.ajax({--}}
+        {{--        url: "{{ route('posts.index') }}",--}}
+        {{--        type: "GET",--}}
+        {{--        success: function (response) {--}}
+        {{--            $("#showPosts").html(response);--}}
+        {{--            $("div").form({--}}
+        {{--                order: [0, 'desc']--}}
+        {{--            });--}}
+        {{--        }--}}
+        {{--    });--}}
+        {{--}--}}
+        {{--$('#postAdd').click(function(e){--}}
+        {{--    e.preventDefault();--}}
+        {{--    var form = $('#addPost');--}}
+        {{--    var formData = new FormData($('#addPost')[0]);--}}
+        {{--    $.ajax({--}}
+        {{--        type: "POST",--}}
+        {{--        url: "{{ route('posts.store') }}",--}}
+        {{--        data: formData,--}}
+        {{--        processData: false,--}}
+        {{--        contentType: false,--}}
+        {{--        success: function (data) {--}}
+        {{--            showAllPosts();--}}
+        {{--        },--}}
+        {{--        error: function (error) {--}}
+        {{--            console.log(error);--}}
+        {{--            alert('error'+error);--}}
+        {{--        }--}}
+        {{--    })--}}
+        {{--})--}}
+    })
+</script>
+
 
 </body>
 </html>

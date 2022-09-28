@@ -21,21 +21,51 @@ class Controller extends BaseController
 
     function chat()
     {
-        return view('chat');
+        return view('chat') ->with([
+
+        ]);
     }
 
     function send_message(Request $request)
     {
-        dd($request);
-//        $request->validate([
-//           'username' => ['string'],
-//           'message' => ['message']
+        $request->validate([
+           'username' => ['string'],
+           'message' => ['message']
+        ]);
+
+        $username = $request->username;
+        $message = $request->message;
+
+        event(new Message("username", "message"));
+
+        return ["success" => true];
+    }
+
+//    /**
+//     * Fetch all messages
+//     *
+//     * @return Message
+//     */
+//    public function fetchMessages()
+//    {
+//        return Message::with('user')->get();
+//    }
+//
+//    /**
+//     * Persist message to database
+//     *
+//     * @param  Request $request
+//     * @return Response
+//     */
+//    public function sendMessage(Request $request)
+//    {
+//        $user = Auth::user();
+//
+//        $message = $user->messages()->create([
+//            'message' => $request->input('message')
 //        ]);
 //
-//        $username = $request->username;
-//        $message = $request->message;
-//
-//        event(new Message($username, $message));
-    }
+//        return ['status' => 'Message Sent!'];
+//    }
 
 }

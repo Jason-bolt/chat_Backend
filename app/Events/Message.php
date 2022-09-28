@@ -35,7 +35,7 @@ class Message implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('chat');
+        return ['chat'];
     }
 
     public function broadcastAs()
