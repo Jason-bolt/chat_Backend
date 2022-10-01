@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -9,6 +10,7 @@ use Illuminate\Routing\Controller as BaseController;
 use App\Events\Message;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 
 class Controller extends BaseController
 {
@@ -21,10 +23,17 @@ class Controller extends BaseController
 
     function chat()
     {
-        return view('chat') ->with([
+        $users = User::all()->except(Auth::id());
 
+        return view('chat')->with([
+            'users' => $users
         ]);
     }
+
+//    function chat_messages()
+//    {
+//
+//    }
 
     function send_message(Request $request)
     {
