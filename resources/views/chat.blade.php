@@ -38,7 +38,7 @@
     <div class="container">
         <div class="row mt-4 shadow" style="height: 90vh;">
             <!-- Left side -->
-            <div class="col-4" style="background-color: #eee;">
+            <div class="col-md-4 col-6" style="background-color: #eee;">
                 <!-- user info -->
                 <div class="text-center pt-4">
                     <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="120px">
@@ -88,16 +88,21 @@
                 <div style="height: 84vh; overflow: auto;" class="">
                     <div class="container pt-3" id="messages" style="font-size: 13px;">
 
+                        @if (!isset($messages))
+                            <p class="display-6 text-center">No chat selected</p>
+                        @else
+                            <!-- Other person's message -->
+                            <div class="d-flex justify-content-start">
+                                <p class="rounded bg-white px-2 mb-2 d-inline-block py-1 me-0" style="max-width: 70%;">This is another message</p>
+                            </div>
 
-                        <!-- Other person's message -->
-                        <div class="d-flex justify-content-start">
-                            <p class="rounded bg-white px-2 mb-2 d-inline-block py-1 me-0" style="max-width: 70%;">This is another message</p>
-                        </div>
+                            <!-- My message -->
+                            <div class="d-flex justify-content-end">
+                                <p class="rounded bg-white px-2 mb-2 d-inline-block py-1 me-0" style="max-width: 70%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio rerum amet cumque quod iste. Voluptate earum soluta consequuntur, officia mollitia assumenda maiores, nesciunt eveniet enim vitae maxime minima quasi voluptatibus.</p>
+                            </div>
+                        @endif
 
-                        <!-- My message -->
-                        <div class="d-flex justify-content-end">
-                            <p class="rounded bg-white px-2 mb-2 d-inline-block py-1 me-0" style="max-width: 70%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio rerum amet cumque quod iste. Voluptate earum soluta consequuntur, officia mollitia assumenda maiores, nesciunt eveniet enim vitae maxime minima quasi voluptatibus.</p>
-                        </div>
+
 
                     </div>
                 </div>
