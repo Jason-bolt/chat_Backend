@@ -48,24 +48,7 @@
                 <!-- Contact list -->
                 <div style="height: 63vh; overflow: auto;">
 
-                    <div id="contact-tile" >
-                        <div class="border">
-                            <div class="d-inline-flex p-1">
-                                <div>
-                                    <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
-                                </div>
-
-                                <div class="ms-2 mt-1">
-                                    <h6 class="m-0">Name of person</h6>
-                                    <p class="p-0 m-0">
-                                        <small>This is a message</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a onclick="window.open('/www.google.com', '_blank')" style="color:#222; text-decoration:none; cursor:pointer;" >
+                    @forelse($users as $user)
                         <div id="contact-tile" >
                             <div class="border">
                                 <div class="d-inline-flex p-1">
@@ -73,16 +56,19 @@
                                         <img src="{{ asset('me.jpg') }}" alt="Image" class="img-fluid rounded-circle" width="50px">
                                     </div>
 
-                                    <div class="ms-2 mt-1">
-                                        <h6 class="m-0">Name of person</h6>
-                                        <p class="p-0 m-0">
-                                            <small>This is a message</small>
-                                        </p>
+                                    <div class="ms-2 mt-3">
+                                        <h6 class="m-0 text-capitalize">{{ $user->username }}</h6>
+{{--                                        <p class="p-0 m-0">--}}
+{{--                                            <small>This is a message</small>--}}
+{{--                                        </p>--}}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    @empty
+                        <p class="lead">No other user on the platform!</p>
+                    @endforelse
+
 
                 </div>
             </div>
