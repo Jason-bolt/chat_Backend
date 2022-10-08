@@ -11,7 +11,8 @@ use Livewire\Component;
 class Chat extends Component
 {
     public $messages = null;
-    public $text;
+    public $textMessage;
+    public $recipient_id = null;
 
     public function render()
     {
@@ -25,12 +26,29 @@ class Chat extends Component
     {
         $auth_id = Auth::id();
 
+        $this->recipient_id = $id;
         $this->messages = DB::select('SELECT * FROM messages WHERE recipient_id = ? AND sender_id = ? OR recipient_id = ? AND sender_id = ?', [$auth_id, $id, $id, $auth_id]);
+
+        $this->messages = json_decode(json_encode($this->messages), true);
+
+//        foreach ($this->messages as $message)
+//        {
+//            dd($message['recipient_id']);
+//        }
     }
 
     public function postMessage()
     {
+//        dd($this->textMessage);
+        $this->textMessage = trim($this->textMessage);
+        Messages::create([
+           'sender_id' => Auth::id(),
+           'recipient_id' => $this->recipient_id,
+           'message' => $this->textMessage
+        ]);
 
+        $this->textMessage = '';
+        $this->getMessage($this->recipient_id);
     }
 
 }

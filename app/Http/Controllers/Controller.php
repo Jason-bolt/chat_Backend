@@ -30,51 +30,51 @@ class Controller extends BaseController
         ]);
     }
 
-//    function chat_messages()
-//    {
+////    function chat_messages()
+////    {
+////
+////    }
 //
-//    }
-
-    function send_message(Request $request)
-    {
-        $request->validate([
-           'username' => ['string'],
-           'message' => ['message']
-        ]);
-
-        $username = $request->username;
-        $message = $request->message;
-
-        event(new Message("username", "message"));
-
-        return ["success" => true];
-    }
-
-//    /**
-//     * Fetch all messages
-//     *
-//     * @return Message
-//     */
-//    public function fetchMessages()
+//    function send_message(Request $request)
 //    {
-//        return Message::with('user')->get();
-//    }
-//
-//    /**
-//     * Persist message to database
-//     *
-//     * @param  Request $request
-//     * @return Response
-//     */
-//    public function sendMessage(Request $request)
-//    {
-//        $user = Auth::user();
-//
-//        $message = $user->messages()->create([
-//            'message' => $request->input('message')
+//        $request->validate([
+//           'username' => ['string'],
+//           'message' => ['message']
 //        ]);
 //
-//        return ['status' => 'Message Sent!'];
+//        $username = $request->username;
+//        $message = $request->message;
+//
+//        event(new Message("username", "message"));
+//
+//        return ["success" => true];
 //    }
+//
+////    /**
+////     * Fetch all messages
+////     *
+////     * @return Message
+////     */
+////    public function fetchMessages()
+////    {
+////        return Message::with('user')->get();
+////    }
+////
+////    /**
+////     * Persist message to database
+////     *
+////     * @param  Request $request
+////     * @return Response
+////     */
+////    public function sendMessage(Request $request)
+////    {
+////        $user = Auth::user();
+////
+////        $message = $user->messages()->create([
+////            'message' => $request->input('message')
+////        ]);
+////
+////        return ['status' => 'Message Sent!'];
+////    }
 
 }
