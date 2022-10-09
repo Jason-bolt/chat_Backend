@@ -50,7 +50,7 @@
 
 
                     <!-- Messages -->
-                    <div style="height: 75vh; overflow: auto;" class="">
+                    <div style="height: 75vh; overflow: auto; {{ $recipient_id ? 'display: flex; flex-direction: column-reverse' : '' }} " class="">
                         <div class="container pt-3" id="messages" style="font-size: 13px;">
 
                             @if ($recipient_id == null)
