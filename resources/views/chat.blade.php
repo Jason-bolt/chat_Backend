@@ -12,6 +12,11 @@
 
     @vite('resources/js/app.js')
 
+    <script>
+        Echo.channel('chat').listen('.message', (e) => {
+            console.log(e);
+            });
+    </script>
 
     <style>
         body{

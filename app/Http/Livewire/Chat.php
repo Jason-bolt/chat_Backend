@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Events\Message;
 use App\Models\Messages;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -41,13 +42,19 @@ class Chat extends Component
     {
 //        dd($this->textMessage);
         $this->textMessage = trim($this->textMessage);
-        Messages::create([
+
+        if ($this->textMessage == '')
+        {
+            return;
+        }
+        $message = Messages::create([
            'sender_id' => Auth::id(),
            'recipient_id' => $this->recipient_id,
            'message' => $this->textMessage
         ]);
 
         $this->textMessage = '';
+//        event(new Message($message));
         $this->getMessage($this->recipient_id);
     }
 
