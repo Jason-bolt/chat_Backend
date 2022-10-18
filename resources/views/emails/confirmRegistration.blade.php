@@ -1,11 +1,11 @@
 @component('mail::message')
-# Introduction
+# Congratulations!
 
-The body of your message.
+You have successfully registered on the {{ config('app.name') }}. Enjoy the best chatting service.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+{{--@component('mail::button', ['url' => ''])--}}
+{{--Button Text--}}
+{{--@endcomponent--}}
 
 Thanks,<br>
 {{ config('app.name') }}

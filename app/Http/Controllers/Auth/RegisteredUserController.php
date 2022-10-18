@@ -58,7 +58,5 @@ class RegisteredUserController extends Controller
     public function sendMail(User $user)
     {
         $this->dispatch(new UserRegisteredJob($user));
-
-        dd('Email sent successfully');
     }
 }
