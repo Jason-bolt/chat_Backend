@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\UserRegisteredJob;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -48,8 +49,16 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
+        $this->sendMail($user);
 //        Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
+    }
+
+    public function sendMail(User $user)
+    {
+        $this->dispatch(new UserRegisteredJob($user));
+
+        dd('Email sent successfully');
     }
 }
