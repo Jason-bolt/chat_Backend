@@ -105,3 +105,9 @@
     </section>
 
 </div>
+
+{{--<script>--}}
+{{--    window.Echo.channel('message').listen('Message', (e) => {--}}
+{{--        console.log(e);--}}
+{{--    });--}}
+{{--</script>--}}
