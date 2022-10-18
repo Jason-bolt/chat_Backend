@@ -53,6 +53,8 @@ class Chat extends Component
            'message' => $this->textMessage
         ]);
 
+        event(new Message($this->textMessage));
+
         $this->textMessage = '';
 //        event(new Message($message));
         $this->getMessage($this->recipient_id);

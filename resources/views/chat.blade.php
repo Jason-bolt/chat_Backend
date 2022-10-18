@@ -35,13 +35,13 @@
         }
     </style>
 
-{{--    @livewireStyles--}}
+    @livewireStyles
 
 </head>
 <!-- <body style="background-color: #ebebeb; "> -->
 <body>
 
-{{--    @livewireScripts--}}
+    @livewireScripts
 
     <livewire:chat />
 
