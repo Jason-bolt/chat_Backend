@@ -15,6 +15,9 @@ class Chat extends Component
     public $textMessage;
     public $recipient_id = null;
 
+//    Displaying message to other when post
+    protected $listeners = ['echo:message,Message' => 'getMessage({$this->recipient_id})'];
+
     public function render()
     {
         $users = User::all()->except(Auth::id());
@@ -53,7 +56,7 @@ class Chat extends Component
            'message' => $this->textMessage
         ]);
 
-        event(new Message($this->textMessage));
+        event(new Message($this->textMessage, Auth::id(), $this->recipient_id));
 
         $this->textMessage = '';
 //        event(new Message($message));

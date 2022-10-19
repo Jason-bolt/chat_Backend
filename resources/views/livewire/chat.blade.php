@@ -1,5 +1,5 @@
 <div>
-    <section class="">
+    <section style="min-width: 500px">
         <div class="container">
             <div class="row mt-4 shadow" style="height: 90vh;">
                 <!-- Left side -->
