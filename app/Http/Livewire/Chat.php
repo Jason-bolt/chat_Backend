@@ -21,8 +21,11 @@ class Chat extends Component
     public function render()
     {
         $users = User::all()->except(Auth::id());
+        $username = User::find(Auth::id())->username;
+//        dd($username);
         return view('livewire.chat')->with([
-            'users' => $users
+            'users' => $users,
+            'username' => $username
         ]);
     }
 

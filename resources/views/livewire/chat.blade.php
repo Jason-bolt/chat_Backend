@@ -7,7 +7,7 @@
                     <!-- user info -->
                     <div class="text-center pt-4">
                         <img src="{{ asset('default_user.png') }}" alt="Image" class="img-fluid rounded-circle" width="120px">
-                        <p class="lead">Jason Appiatu</p>
+                        <p class="lead text-capitalize">{{ $username }}</p>
                     </div>
 
                     <!-- Contact list -->
