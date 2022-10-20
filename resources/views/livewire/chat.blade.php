@@ -43,7 +43,7 @@
                     <!-- Top -->
                     <div class="text-end" style="height: 60px; width: 100%; background-image: linear-gradient(to right, #1900ff, rgb(59, 0, 99));">
 
-                        <p class="h5"><span class="text-white">Jason Appiatu</span>
+                        <p class="h5"><span class="text-white text-capitalize">{{ $recipient_username }}</span>
                             <img src="{{ asset('default_user.png') }}" alt="Image" class="img-fluid rounded-circle m-2" width="45px">
                         </p>
                     </div>

@@ -14,6 +14,7 @@ class Chat extends Component
     public $messages = null;
     public $textMessage;
     public $recipient_id = null;
+    public $recipient_username;
 
 //    Displaying message to other when post
     protected $listeners = ['echo:message,Message' => 'getMessage({$this->recipient_id})'];
@@ -32,6 +33,7 @@ class Chat extends Component
     public function getMessage($id)
     {
         $auth_id = Auth::id();
+        $this->recipient_username = User::find($id)->username;
 
         $this->recipient_id = $id;
         $this->messages = DB::select('SELECT * FROM messages WHERE recipient_id = ? AND sender_id = ? OR recipient_id = ? AND sender_id = ?', [$auth_id, $id, $id, $auth_id]);
