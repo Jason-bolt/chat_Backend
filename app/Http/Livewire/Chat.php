@@ -17,7 +17,13 @@ class Chat extends Component
     public $recipient_username;
 
 //    Displaying message to other when post
-    protected $listeners = ['echo:message,Message' => 'getMessage({$this->recipient_id})'];
+//    protected $listeners = ['echo:message,Message' => 'getMessage({$this->recipient_id})'];
+    protected $listeners = ['echo:message,Message' => 'echoFunction'];
+
+    public function echoFunction()
+    {
+        $this->getMessage($this->recipient_id);
+    }
 
     public function render()
     {
