@@ -8,6 +8,10 @@
                     <div class="text-center pt-4">
                         <img src="{{ asset('default_user.png') }}" alt="Image" class="img-fluid rounded-circle" width="120px">
                         <p class="lead text-capitalize">{{ $username }}</p>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn">Logout</button>
+                        </form>
                     </div>
 
                     <!-- Contact list -->
