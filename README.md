@@ -29,3 +29,4 @@ After executing the commands above, register 2 users and login (using either two
 * Attaching content to a message, or sending media files.
 
 ## Link To Project
+https://appiatu-chat.herokuapp.com/
