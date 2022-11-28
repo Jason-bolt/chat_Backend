@@ -49,7 +49,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        $this->sendMail($user);
+//        $this->sendMail($user);
 //        Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
